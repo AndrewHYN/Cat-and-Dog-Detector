@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog & Cat Detector</title>
+    <link rel="stylesheet" href="{% static 'detector/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dog & Cat Detector</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Detect</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                <h2>Result: {{ result }}</h2>
+                <img src="{{ uploaded_image_url }}" alt="Uploaded Image">
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="{% static 'detector/js/script.js' %}"></script>
+</body>
+</html>
