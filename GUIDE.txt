@@ -1,0 +1,118 @@
+Project Title: Dog & Cat Detector
+
+Author: AndrewHYN
+Repository: https://github.com/AndrewHYN/Cat-and-Dog-Detector
+
+📄 Project Overview
+
+This project is a Dog & Cat Image Classifier built using Python, TensorFlow/Keras, Django, and HTML/CSS/JS for the web interface. It allows users to upload an image of either a dog or cat via the website, and then predicts whether the image is of a dog or a cat using a trained Convolutional Neural Network (CNN).
+
+🔨 How It Was Made
+
+1️⃣ Dataset Preparation
+
+Dataset Structure:
+
+dataset/
+├── train/
+│   ├── dogs/
+│   └── cats/
+└── validation/
+    ├── dogs/
+    └── cats/
+
+Images: 24 cat photos & 24 dog photos were used to build a small prototype dataset.
+
+Note: Dataset is not stored on GitHub to save space and encourage custom dataset training.
+
+2️⃣ Model Building
+
+Framework: TensorFlow / Keras
+
+Architecture: A custom CNN with 4 convolutional layers and max-pooling, followed by dense layers.
+
+Features:
+
+Data augmentation for better generalization.
+
+EarlyStopping to prevent overfitting.
+
+Class weight balancing to manage dataset imbalance.
+
+3️⃣ Model Training
+
+Trained locally using CPU (option for GPU if available).
+
+Results:
+
+Accuracy and Loss plots generated using Matplotlib.
+
+Confusion Matrix for evaluation.
+
+Model Saved as: dog_cat_model.keras (ignored in .gitignore)
+
+4️⃣ Django Web Application
+
+Django App Name: detector
+
+Main Features:
+
+Upload an image.
+
+Run prediction.
+
+Display result on the page with uploaded image.
+
+Templates Used:
+
+home.html – form to upload image and display result.
+
+CSS: Custom styling via styles.css.
+
+Static Files:
+
+detector/static/detector/css/styles.css
+detector/static/detector/js/script.js
+
+5️⃣ Deployment Preparation
+
+.gitignore configured to exclude datasets, models, cache files, large binaries.
+
+NOTES.txt included to guide future users on how to train their own models.
+
+⚙️ Usage Guide
+
+Clone Repository
+
+git clone https://github.com/AndrewHYN/Cat-and-Dog-Detector.git
+
+Install Requirements
+
+pip install -r requirements.txt
+
+Train Your Own Model (Optional but recommended)
+
+python train_model.py
+
+Run Django Server
+
+python manage.py runserver
+
+Access in Browser
+
+http://127.0.0.1:8000/
+
+📝 Notes to Users
+
+Dataset not included – Please provide your own dataset by following the folder structure.
+
+Model not included – You can either use the provided training script or adapt your own.
+
+Do NOT upload datasets or models to GitHub without using .gitignore properly!
+
+📬 Contact
+
+For feedback or contributions, visit the repository or contact AndrewHYN via GitHub.
+
+Thank you for using the Dog & Cat Detector! 🐕🐈
+

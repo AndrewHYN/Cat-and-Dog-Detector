@@ -1,0 +1,30 @@
+DOG & CAT DETECTOR - Setup Notes
+
+1️⃣ Dataset
+-----------
+Dataset is NOT included in this repository to keep the size small.
+→ Please prepare your own dataset in the following structure:
+
+dataset/
+├── train/
+│   ├── cats/
+│   └── dogs/
+├── validation/
+    ├── cats/
+    └── dogs/
+
+Recommended size: at least 20+ images per class for testing.
+
+2️⃣ Training the Model
+-----------------------
+To train your own model, run:
+> python train_model.py
+
+This will generate a dog_cat_model.keras file.
+
+3️⃣ Pre-trained Model
+----------------------
+If you want to skip training, you can download a pre-trained model here:
+→ [Add Google Drive / Dropbox / Hugging Face URL here if available]
+
+Happy Detecting! 🐶🐱
